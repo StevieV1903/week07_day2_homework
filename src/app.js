@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   new Vue({
     el: "#app",
     data: {
+      exchangeRates:{},
       selectedRate: null
     },
 
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       getExchangeRates: function() {
         fetch('https://api.exchangeratesapi.io/latest')
         .then(response => response.json())
-        .then(exchangeRates => this.selectedRate = exchangeRates);
+        .then(exchangeRates => this.exchangeRates = exchangeRates);
       }
     }
   });

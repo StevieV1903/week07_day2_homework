@@ -16,14 +16,8 @@
     <label for="exchangeRate_select">Select an Exchange Rate:</label>
     <select id="exchangeRate_select" v-model="selectedRate">
       <option disabled value="">Select a Rate</option>
-      <option v-for="exchangeRate in exchangeRates" :value="exchangeRate">{{ exchangeRates  }} </option>
+      <option v-for="exchangeRate in exchangeRates" :value="exchangeRate">{{ exchangeRates.value  }} </option>
     </select>
   </div>
 </body>
 </html>
-
-<!-- <label for="country_select">Select a Country:</label>
-      <select id="country_select" v-model="selectedCountry">
-        <option disabled value="">Select a country</option>
-        <option v-for="country in countries" :value="country">{{country.name}}</option>
-      </select> -->
